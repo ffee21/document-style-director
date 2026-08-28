@@ -1,0 +1,6 @@
+interface:
+  display_name: "Document Style Director"
+  short_description: "Context-aware interactive document design selection"
+  default_prompt: "Use $document-style-director to choose a context-aware visual direction before creating this document."
+policy:
+  allow_implicit_invocation: true

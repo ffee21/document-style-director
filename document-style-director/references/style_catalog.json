@@ -1,0 +1,388 @@
+{
+  "catalog_version": "1.0.0",
+  "description": "Certified context-aware document style recipes for Word and Google Docs-targeted DOCX output.",
+  "minimum_certified_recipes": 36,
+  "base": {
+    "page": {
+      "size": "Letter",
+      "orientation": "portrait",
+      "width_in": 8.5,
+      "height_in": 11.0,
+      "margins_in": {"top": 1.0, "right": 1.0, "bottom": 1.0, "left": 1.0},
+      "header_distance_in": 0.492,
+      "footer_distance_in": 0.492,
+      "content_width_dxa": 9360
+    },
+    "fonts": {
+      "body": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]},
+      "heading": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]},
+      "mono": {"primary": "Andale Mono", "fallbacks": ["Consolas", "Courier New"]},
+      "east_asia_sans": {"primary": "Apple SD Gothic Neo", "fallbacks": ["Malgun Gothic", "Noto Sans CJK KR"]},
+      "east_asia_serif": {"primary": "AppleMyungjo", "fallbacks": ["Batang", "Noto Serif CJK KR"]}
+    },
+    "typography": {
+      "body": {"size_pt": 10.5, "weight": "normal", "alignment": "left", "color": "#202124", "before_pt": 0, "after_pt": 6, "line_spacing": 1.18},
+      "title": {"size_pt": 28, "weight": "bold", "alignment": "left", "color": "#1F2933", "before_pt": 0, "after_pt": 6, "all_caps": false},
+      "subtitle": {"size_pt": 13, "weight": "normal", "alignment": "left", "color": "#52606D", "before_pt": 0, "after_pt": 16, "italic": false},
+      "h1": {"size_pt": 16, "weight": "bold", "color": "#1F2933", "before_pt": 16, "after_pt": 8, "keep_with_next": true},
+      "h2": {"size_pt": 13, "weight": "bold", "color": "#334E68", "before_pt": 12, "after_pt": 6, "keep_with_next": true},
+      "h3": {"size_pt": 11.5, "weight": "bold", "color": "#486581", "before_pt": 8, "after_pt": 4, "keep_with_next": true},
+      "metadata": {"size_pt": 9.5, "weight": "normal", "color": "#616E7C", "after_pt": 2, "line_spacing": 1.05},
+      "caption": {"size_pt": 9, "weight": "normal", "color": "#616E7C", "after_pt": 5, "line_spacing": 1.05},
+      "table_text": {"size_pt": 9.5, "weight": "normal", "color": "#202124", "line_spacing": 1.08}
+    },
+    "colors": {
+      "ink": "#202124",
+      "muted": "#616E7C",
+      "heading": "#1F2933",
+      "accent": "#2F6B9A",
+      "accent_dark": "#163A5F",
+      "accent_light": "#E8F1F8",
+      "border": "#CBD2D9",
+      "table_header_fill": "#E8EEF5",
+      "table_alt_fill": "#F7F9FB",
+      "callout_fill": "#F4F7FA",
+      "page_background": "#FFFFFF"
+    },
+    "lists": {
+      "bullet_level_0": {"marker": "bullet", "marker_aligned_at_dxa": 360, "text_indent_at_dxa": 720, "hanging_dxa": 360, "after_pt": 5, "line_spacing": 1.15},
+      "decimal_level_0": {"marker": "%1.", "marker_aligned_at_dxa": 360, "text_indent_at_dxa": 720, "hanging_dxa": 360, "after_pt": 5, "line_spacing": 1.15}
+    },
+    "tables": {
+      "width_dxa": 9360,
+      "indent_dxa": 120,
+      "layout": "fixed",
+      "border_style": "quiet_grid",
+      "border_color": "#CBD2D9",
+      "border_size_eighth_pt": 4,
+      "header_fill": "#E8EEF5",
+      "alternate_fill": "#F7F9FB",
+      "cell_margins_dxa": {"top": 90, "bottom": 90, "start": 120, "end": 120},
+      "header_repeat": true,
+      "vertical_alignment": "center"
+    },
+    "callouts": {
+      "fill": "#F4F7FA",
+      "border_color": "#9FB3C8",
+      "border_side": "start",
+      "border_size_eighth_pt": 12,
+      "padding_dxa": 160,
+      "label_weight": "bold"
+    },
+    "page_furniture": {
+      "running_header": "quiet_label",
+      "header_rule": false,
+      "footer": "right_page_number",
+      "footer_rule": false,
+      "first_page_different": true
+    },
+    "accessibility": {
+      "minimum_body_size_pt": 9.5,
+      "minimum_table_size_pt": 8.5,
+      "minimum_text_contrast_ratio": 4.5,
+      "minimum_large_text_contrast_ratio": 3.0,
+      "never_encode_meaning_by_color_alone": true
+    }
+  },
+  "visual_systems": [
+    {
+      "id": "native_docs",
+      "label": "Native Docs",
+      "voice": "Familiar, understated, and native to collaborative editing.",
+      "surfaces": ["word", "google-docs"],
+      "overrides": {
+        "fonts": {
+          "body": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]},
+          "heading": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}
+        },
+        "typography": {
+          "body": {"size_pt": 11, "color": "#000000", "after_pt": 8, "line_spacing": 1.15},
+          "title": {"size_pt": 26, "weight": "normal", "color": "#000000", "after_pt": 3},
+          "subtitle": {"size_pt": 12, "color": "#555555", "after_pt": 14},
+          "h1": {"size_pt": 20, "weight": "normal", "color": "#000000", "before_pt": 20, "after_pt": 6},
+          "h2": {"size_pt": 16, "weight": "normal", "color": "#000000", "before_pt": 18, "after_pt": 6},
+          "h3": {"size_pt": 14, "weight": "normal", "color": "#434343", "before_pt": 16, "after_pt": 4}
+        },
+        "colors": {"ink": "#000000", "muted": "#555555", "heading": "#000000", "accent": "#000000", "accent_dark": "#000000", "accent_light": "#FFFFFF", "border": "#DADCE0", "table_header_fill": "#FFFFFF", "table_alt_fill": "#FFFFFF", "callout_fill": "#FFFFFF"},
+        "tables": {"indent_dxa": 0, "border_style": "quiet_minimal", "border_color": "#DADCE0", "header_fill": "#FFFFFF", "alternate_fill": "#FFFFFF"},
+        "callouts": {"fill": "#FFFFFF", "border_color": "#DADCE0", "border_side": "none", "border_size_eighth_pt": 0},
+        "page_furniture": {"running_header": "none", "header_rule": false, "footer": "none", "footer_rule": false}
+      }
+    },
+    {
+      "id": "executive_navy",
+      "label": "Boardroom Navy",
+      "voice": "Decisive, restrained, and optimized for executive scanning.",
+      "surfaces": ["word", "google-docs"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}, "heading": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}},
+        "typography": {"title": {"size_pt": 27, "color": "#102A43"}, "h1": {"color": "#102A43"}, "h2": {"color": "#243B53"}, "h3": {"color": "#486581"}},
+        "colors": {"ink": "#102A43", "muted": "#627D98", "heading": "#102A43", "accent": "#2F6B9A", "accent_dark": "#102A43", "accent_light": "#EAF2F8", "border": "#BCCCDC", "table_header_fill": "#D9E7F2", "table_alt_fill": "#F4F8FB", "callout_fill": "#EDF4F8"},
+        "tables": {"border_style": "quiet_grid", "border_color": "#BCCCDC", "header_fill": "#D9E7F2", "alternate_fill": "#F4F8FB"},
+        "callouts": {"fill": "#EDF4F8", "border_color": "#2F6B9A", "border_side": "start"},
+        "page_furniture": {"running_header": "document_type_and_status", "header_rule": true, "footer": "right_page_number"}
+      }
+    },
+    {
+      "id": "swiss_minimal",
+      "label": "Swiss Minimal",
+      "voice": "Crisp, architectural, and confident with disciplined whitespace.",
+      "surfaces": ["word", "google-docs"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Helvetica Neue", "fallbacks": ["Arial", "Liberation Sans"]}, "heading": {"primary": "Helvetica Neue", "fallbacks": ["Arial", "Liberation Sans"]}},
+        "typography": {"title": {"size_pt": 31, "weight": "bold", "color": "#111111"}, "subtitle": {"color": "#555555"}, "h1": {"size_pt": 14, "color": "#111111", "before_pt": 20, "after_pt": 7, "all_caps": true}, "h2": {"size_pt": 12, "color": "#111111"}, "h3": {"size_pt": 10.5, "color": "#444444"}},
+        "colors": {"ink": "#111111", "muted": "#666666", "heading": "#111111", "accent": "#C7352A", "accent_dark": "#8F241D", "accent_light": "#FAECEA", "border": "#CFCFCF", "table_header_fill": "#111111", "table_alt_fill": "#F4F4F4", "callout_fill": "#FAECEA"},
+        "tables": {"border_style": "horizontal_rules", "border_color": "#BDBDBD", "header_fill": "#111111", "alternate_fill": "#F4F4F4", "header_text_color": "#FFFFFF"},
+        "callouts": {"fill": "#FAECEA", "border_color": "#C7352A", "border_side": "top"},
+        "page_furniture": {"running_header": "small_caps_section", "header_rule": false, "footer": "folio_and_title"}
+      }
+    },
+    {
+      "id": "warm_editorial",
+      "label": "Warm Editorial",
+      "voice": "Human, reflective, and polished for sustained reading.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Georgia", "fallbacks": ["Times New Roman", "Liberation Serif"]}, "heading": {"primary": "Avenir Next", "fallbacks": ["Trebuchet MS", "Arial"]}},
+        "typography": {"body": {"size_pt": 10.5, "alignment": "left", "line_spacing": 1.28}, "title": {"size_pt": 32, "weight": "normal", "color": "#374151"}, "subtitle": {"size_pt": 13.5, "color": "#7C5C45", "italic": true}, "h1": {"color": "#5B4636"}, "h2": {"color": "#7C5C45"}, "h3": {"color": "#6B7280"}},
+        "colors": {"ink": "#2F2A27", "muted": "#746A62", "heading": "#5B4636", "accent": "#B46A4C", "accent_dark": "#7C402D", "accent_light": "#F7EEE9", "border": "#D9CCC4", "table_header_fill": "#EADFD8", "table_alt_fill": "#FAF7F4", "callout_fill": "#F7EEE9"},
+        "tables": {"border_style": "horizontal_rules", "border_color": "#D9CCC4", "header_fill": "#EADFD8", "alternate_fill": "#FAF7F4"},
+        "callouts": {"fill": "#F7EEE9", "border_color": "#B46A4C", "border_side": "start"},
+        "page_furniture": {"running_header": "title_and_section", "header_rule": true, "footer": "center_folio"}
+      }
+    },
+    {
+      "id": "technical_monochrome",
+      "label": "Technical Monochrome",
+      "voice": "Precise, utilitarian, and optimized for specifications and procedures.",
+      "surfaces": ["word", "google-docs"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}, "heading": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}, "mono": {"primary": "Andale Mono", "fallbacks": ["Consolas", "Courier New"]}},
+        "typography": {"title": {"size_pt": 25, "color": "#1F2933"}, "h1": {"size_pt": 15, "color": "#1F2933"}, "h2": {"size_pt": 12.5, "color": "#334E68"}, "h3": {"size_pt": 11, "color": "#52606D"}, "table_text": {"size_pt": 9, "line_spacing": 1.04}},
+        "colors": {"ink": "#1F2933", "muted": "#616E7C", "heading": "#1F2933", "accent": "#526D82", "accent_dark": "#243B53", "accent_light": "#EEF2F5", "border": "#9AA5B1", "table_header_fill": "#D9E2EC", "table_alt_fill": "#F5F7FA", "callout_fill": "#EEF2F5"},
+        "tables": {"border_style": "full_grid", "border_color": "#9AA5B1", "header_fill": "#D9E2EC", "alternate_fill": "#F5F7FA"},
+        "callouts": {"fill": "#EEF2F5", "border_color": "#526D82", "border_side": "all"},
+        "page_furniture": {"running_header": "document_id_and_revision", "header_rule": true, "footer": "page_and_classification"}
+      }
+    },
+    {
+      "id": "academic_serif",
+      "label": "Academic Serif",
+      "voice": "Scholarly, evidence-led, and conservative without feeling dated.",
+      "surfaces": ["word", "google-docs"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Times New Roman", "fallbacks": ["Georgia", "Liberation Serif"]}, "heading": {"primary": "Times New Roman", "fallbacks": ["Georgia", "Liberation Serif"]}},
+        "typography": {"body": {"size_pt": 11, "alignment": "justified", "line_spacing": 1.3}, "title": {"size_pt": 23, "weight": "bold", "alignment": "center", "color": "#111111"}, "subtitle": {"size_pt": 12, "alignment": "center", "color": "#444444"}, "h1": {"size_pt": 14, "color": "#111111"}, "h2": {"size_pt": 12, "color": "#222222"}, "h3": {"size_pt": 11, "color": "#333333", "italic": true}},
+        "colors": {"ink": "#111111", "muted": "#555555", "heading": "#111111", "accent": "#3F4E5E", "accent_dark": "#28323D", "accent_light": "#F1F3F5", "border": "#B8BEC4", "table_header_fill": "#E5E8EB", "table_alt_fill": "#F8F8F8", "callout_fill": "#F1F3F5"},
+        "tables": {"border_style": "booktabs", "border_color": "#737A80", "header_fill": "#E5E8EB", "alternate_fill": "#FFFFFF"},
+        "callouts": {"fill": "#F1F3F5", "border_color": "#737A80", "border_side": "top_bottom"},
+        "page_furniture": {"running_header": "short_title_and_section", "header_rule": false, "footer": "center_folio"}
+      }
+    },
+    {
+      "id": "civic_institutional",
+      "label": "Civic Institutional",
+      "voice": "Authoritative, accessible, and appropriate for public accountability.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}, "heading": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}},
+        "typography": {"title": {"size_pt": 28, "color": "#17365D"}, "h1": {"color": "#17365D"}, "h2": {"color": "#254F75"}, "h3": {"color": "#4E6275"}},
+        "colors": {"ink": "#1F2933", "muted": "#5D6975", "heading": "#17365D", "accent": "#9A6A00", "accent_dark": "#17365D", "accent_light": "#FFF5D6", "border": "#AAB7C4", "table_header_fill": "#DCE6F1", "table_alt_fill": "#F7F9FB", "callout_fill": "#FFF5D6"},
+        "tables": {"border_style": "quiet_grid", "border_color": "#AAB7C4", "header_fill": "#DCE6F1", "alternate_fill": "#F7F9FB"},
+        "callouts": {"fill": "#FFF5D6", "border_color": "#9A6A00", "border_side": "start"},
+        "page_furniture": {"running_header": "agency_and_document", "header_rule": true, "footer": "public_record_folio"}
+      }
+    },
+    {
+      "id": "premium_minimal",
+      "label": "Premium Minimal",
+      "voice": "Quietly distinctive, spacious, and suitable for high-value proposals.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Avenir Next", "fallbacks": ["Trebuchet MS", "Arial"]}, "heading": {"primary": "Avenir Next", "fallbacks": ["Trebuchet MS", "Arial"]}},
+        "typography": {"body": {"line_spacing": 1.25}, "title": {"size_pt": 34, "weight": "normal", "color": "#2E2B29"}, "subtitle": {"size_pt": 14, "color": "#756C65"}, "h1": {"size_pt": 15, "color": "#2E2B29", "before_pt": 22}, "h2": {"size_pt": 12.5, "color": "#5B524C"}, "h3": {"size_pt": 10.5, "color": "#756C65", "all_caps": true}},
+        "colors": {"ink": "#2E2B29", "muted": "#756C65", "heading": "#2E2B29", "accent": "#8A6D4B", "accent_dark": "#59452F", "accent_light": "#F5F1EC", "border": "#D7CEC5", "table_header_fill": "#EEE8E1", "table_alt_fill": "#FAF8F5", "callout_fill": "#F5F1EC"},
+        "tables": {"border_style": "horizontal_rules", "border_color": "#D7CEC5", "header_fill": "#EEE8E1", "alternate_fill": "#FAF8F5"},
+        "callouts": {"fill": "#F5F1EC", "border_color": "#8A6D4B", "border_side": "top"},
+        "page_furniture": {"running_header": "minimal_title", "header_rule": false, "footer": "center_folio"}
+      }
+    },
+    {
+      "id": "humanist_teal",
+      "label": "Humanist Teal",
+      "voice": "Approachable, practical, and inviting for guidance and collaboration.",
+      "surfaces": ["word", "google-docs"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Trebuchet MS", "fallbacks": ["Arial", "Liberation Sans"]}, "heading": {"primary": "Trebuchet MS", "fallbacks": ["Arial", "Liberation Sans"]}},
+        "typography": {"title": {"size_pt": 29, "color": "#0B4F4A"}, "h1": {"color": "#0B4F4A"}, "h2": {"color": "#176B65"}, "h3": {"color": "#3E6F6B"}},
+        "colors": {"ink": "#173B3A", "muted": "#58716F", "heading": "#0B4F4A", "accent": "#16877D", "accent_dark": "#0B4F4A", "accent_light": "#E4F4F1", "border": "#A7CBC6", "table_header_fill": "#D5ECE8", "table_alt_fill": "#F3FAF8", "callout_fill": "#E4F4F1"},
+        "tables": {"border_style": "quiet_grid", "border_color": "#A7CBC6", "header_fill": "#D5ECE8", "alternate_fill": "#F3FAF8"},
+        "callouts": {"fill": "#E4F4F1", "border_color": "#16877D", "border_side": "start"},
+        "page_furniture": {"running_header": "section_and_owner", "header_rule": false, "footer": "right_page_number"}
+      }
+    },
+    {
+      "id": "data_forward",
+      "label": "Data Forward",
+      "voice": "Analytical, compact, and designed around comparisons and evidence.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}, "heading": {"primary": "Arial", "fallbacks": ["Helvetica Neue", "Liberation Sans"]}},
+        "typography": {"title": {"size_pt": 27, "color": "#143D59"}, "h1": {"size_pt": 15, "color": "#143D59"}, "h2": {"size_pt": 12.5, "color": "#1F5F8B"}, "h3": {"size_pt": 10.5, "color": "#3C6E8F"}, "table_text": {"size_pt": 9, "line_spacing": 1.02}},
+        "colors": {"ink": "#17324D", "muted": "#5B7083", "heading": "#143D59", "accent": "#0077A8", "accent_dark": "#143D59", "accent_light": "#E2F3F8", "border": "#93B7C8", "table_header_fill": "#CFE7F1", "table_alt_fill": "#F0F8FB", "callout_fill": "#E2F3F8"},
+        "tables": {"border_style": "data_grid", "border_color": "#93B7C8", "header_fill": "#CFE7F1", "alternate_fill": "#F0F8FB"},
+        "callouts": {"fill": "#E2F3F8", "border_color": "#0077A8", "border_side": "top"},
+        "page_furniture": {"running_header": "report_period_and_section", "header_rule": true, "footer": "page_and_source_date"}
+      }
+    },
+    {
+      "id": "startup_bold",
+      "label": "Startup Bold",
+      "voice": "Energetic, contemporary, and suitable for workshops and product pitches.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Avenir Next", "fallbacks": ["Trebuchet MS", "Arial"]}, "heading": {"primary": "Avenir Next", "fallbacks": ["Trebuchet MS", "Arial"]}},
+        "typography": {"title": {"size_pt": 33, "color": "#24144D"}, "subtitle": {"size_pt": 14, "color": "#5C4B78"}, "h1": {"size_pt": 17, "color": "#3C1E78"}, "h2": {"size_pt": 13.5, "color": "#5B35A5"}, "h3": {"size_pt": 11, "color": "#6E5A8A"}},
+        "colors": {"ink": "#241A33", "muted": "#6E607A", "heading": "#3C1E78", "accent": "#6C3FC5", "accent_dark": "#3C1E78", "accent_light": "#F0EAFE", "border": "#C7B8E5", "table_header_fill": "#E3D8F7", "table_alt_fill": "#F8F5FE", "callout_fill": "#F0EAFE"},
+        "tables": {"border_style": "quiet_grid", "border_color": "#C7B8E5", "header_fill": "#E3D8F7", "alternate_fill": "#F8F5FE"},
+        "callouts": {"fill": "#F0EAFE", "border_color": "#6C3FC5", "border_side": "start"},
+        "page_furniture": {"running_header": "product_and_session", "header_rule": false, "footer": "right_page_number"}
+      }
+    },
+    {
+      "id": "legal_conservative",
+      "label": "Legal Conservative",
+      "voice": "Formal, traceable, and deliberately restrained for legal review.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Times New Roman", "fallbacks": ["Georgia", "Liberation Serif"]}, "heading": {"primary": "Times New Roman", "fallbacks": ["Georgia", "Liberation Serif"]}},
+        "typography": {"body": {"size_pt": 11, "alignment": "justified", "line_spacing": 1.2}, "title": {"size_pt": 22, "color": "#1A1A1A"}, "subtitle": {"size_pt": 11.5, "color": "#555555"}, "h1": {"size_pt": 13, "color": "#5A1720"}, "h2": {"size_pt": 11.5, "color": "#1A1A1A"}, "h3": {"size_pt": 11, "color": "#333333", "italic": true}},
+        "colors": {"ink": "#1A1A1A", "muted": "#555555", "heading": "#5A1720", "accent": "#7A2631", "accent_dark": "#5A1720", "accent_light": "#F7EEF0", "border": "#AFAFAF", "table_header_fill": "#E7E7E7", "table_alt_fill": "#F8F8F8", "callout_fill": "#F7EEF0"},
+        "tables": {"border_style": "full_grid", "border_color": "#AFAFAF", "header_fill": "#E7E7E7", "alternate_fill": "#FFFFFF"},
+        "callouts": {"fill": "#F7EEF0", "border_color": "#7A2631", "border_side": "all"},
+        "page_furniture": {"running_header": "matter_and_status", "header_rule": true, "footer": "confidential_folio"}
+      }
+    },
+    {
+      "id": "sustainability_earth",
+      "label": "Sustainability Earth",
+      "voice": "Grounded, credible, and warm for community and sustainability narratives.",
+      "surfaces": ["word"],
+      "overrides": {
+        "fonts": {"body": {"primary": "Georgia", "fallbacks": ["Times New Roman", "Liberation Serif"]}, "heading": {"primary": "Trebuchet MS", "fallbacks": ["Arial", "Liberation Sans"]}},
+        "typography": {"body": {"line_spacing": 1.27}, "title": {"size_pt": 31, "weight": "normal", "color": "#294936"}, "subtitle": {"color": "#6A5E45"}, "h1": {"color": "#294936"}, "h2": {"color": "#476A4E"}, "h3": {"color": "#6A5E45"}},
+        "colors": {"ink": "#26382D", "muted": "#68736B", "heading": "#294936", "accent": "#A46F20", "accent_dark": "#294936", "accent_light": "#F5EEDC", "border": "#BCC8BC", "table_header_fill": "#DCE8DD", "table_alt_fill": "#F6F9F5", "callout_fill": "#F5EEDC"},
+        "tables": {"border_style": "quiet_grid", "border_color": "#BCC8BC", "header_fill": "#DCE8DD", "alternate_fill": "#F6F9F5"},
+        "callouts": {"fill": "#F5EEDC", "border_color": "#A46F20", "border_side": "start"},
+        "page_furniture": {"running_header": "title_and_theme", "header_rule": true, "footer": "center_folio"}
+      }
+    }
+  ],
+  "densities": [
+    {
+      "id": "airy",
+      "label": "Airy",
+      "overrides": {
+        "typography": {"body": {"size_pt": 11, "after_pt": 8, "line_spacing": 1.3}, "h1": {"before_pt": 20, "after_pt": 10}, "h2": {"before_pt": 15, "after_pt": 8}, "h3": {"before_pt": 11, "after_pt": 6}},
+        "lists": {"bullet_level_0": {"after_pt": 6, "line_spacing": 1.25}, "decimal_level_0": {"after_pt": 6, "line_spacing": 1.25}},
+        "tables": {"cell_margins_dxa": {"top": 110, "bottom": 110, "start": 140, "end": 140}}
+      }
+    },
+    {
+      "id": "balanced",
+      "label": "Balanced",
+      "overrides": {
+        "typography": {"body": {"size_pt": 10.5, "after_pt": 6, "line_spacing": 1.18}, "h1": {"before_pt": 16, "after_pt": 8}, "h2": {"before_pt": 12, "after_pt": 6}, "h3": {"before_pt": 8, "after_pt": 4}},
+        "lists": {"bullet_level_0": {"after_pt": 5, "line_spacing": 1.15}, "decimal_level_0": {"after_pt": 5, "line_spacing": 1.15}},
+        "tables": {"cell_margins_dxa": {"top": 90, "bottom": 90, "start": 120, "end": 120}}
+      }
+    },
+    {
+      "id": "compact",
+      "label": "Compact",
+      "overrides": {
+        "typography": {"body": {"size_pt": 9.75, "after_pt": 4, "line_spacing": 1.08}, "h1": {"before_pt": 12, "after_pt": 6}, "h2": {"before_pt": 9, "after_pt": 4}, "h3": {"before_pt": 7, "after_pt": 3}},
+        "lists": {"bullet_level_0": {"marker_aligned_at_dxa": 260, "text_indent_at_dxa": 540, "hanging_dxa": 280, "after_pt": 3, "line_spacing": 1.08}, "decimal_level_0": {"marker_aligned_at_dxa": 260, "text_indent_at_dxa": 540, "hanging_dxa": 280, "after_pt": 3, "line_spacing": 1.08}},
+        "tables": {"cell_margins_dxa": {"top": 65, "bottom": 65, "start": 100, "end": 100}}
+      }
+    }
+  ],
+  "openings": [
+    {"id": "minimal_title", "label": "Minimal Title", "surfaces": ["word", "google-docs"], "tokens": {"top_space_pt": 12, "alignment": "left", "title_size_pt": 28, "subtitle_size_pt": 13, "metadata_layout": "inline", "rule": "none", "feature": "none", "page_break_after": false}},
+    {"id": "memo_masthead", "label": "Memo Masthead", "surfaces": ["word", "google-docs"], "tokens": {"top_space_pt": 16, "alignment": "left", "title_size_pt": 24, "subtitle_size_pt": 13, "metadata_layout": "stacked_labels", "rule": "bottom_hairline", "feature": "decision_status", "page_break_after": false}},
+    {"id": "proposal_centerpiece", "label": "Proposal Centerpiece", "surfaces": ["word"], "tokens": {"top_space_pt": 34, "alignment": "center", "title_size_pt": 30, "subtitle_size_pt": 14, "metadata_layout": "two_column", "rule": "centered_hairline", "feature": "applicant_and_ask", "page_break_after": false}},
+    {"id": "editorial_cover", "label": "Editorial Cover", "surfaces": ["word"], "tokens": {"top_space_pt": 118, "alignment": "center", "title_size_pt": 34, "subtitle_size_pt": 15, "metadata_layout": "lower_page", "rule": "none", "feature": "kicker", "page_break_after": true}},
+    {"id": "customer_pack", "label": "Customer Pack", "surfaces": ["word"], "tokens": {"top_space_pt": 24, "alignment": "left", "title_size_pt": 32, "subtitle_size_pt": 13.5, "metadata_layout": "two_column", "rule": "none", "feature": "engagement_summary", "page_break_after": false}},
+    {"id": "workshop_agenda", "label": "Workshop Agenda", "surfaces": ["word"], "tokens": {"top_space_pt": 20, "alignment": "left", "title_size_pt": 30, "subtitle_size_pt": 13, "metadata_layout": "metric_strip", "rule": "none", "feature": "time_objective_strip", "page_break_after": false}},
+    {"id": "customer_story", "label": "Customer Story", "surfaces": ["word"], "tokens": {"top_space_pt": 22, "alignment": "left", "title_size_pt": 29, "subtitle_size_pt": 13, "metadata_layout": "inline", "rule": "none", "feature": "pull_quote", "page_break_after": false}},
+    {"id": "data_banner", "label": "Data Banner", "surfaces": ["word"], "tokens": {"top_space_pt": 16, "alignment": "left", "title_size_pt": 26, "subtitle_size_pt": 12.5, "metadata_layout": "inline", "rule": "bottom_hairline", "feature": "key_metrics", "page_break_after": false}},
+    {"id": "research_abstract", "label": "Research Abstract", "surfaces": ["word", "google-docs"], "tokens": {"top_space_pt": 28, "alignment": "center", "title_size_pt": 24, "subtitle_size_pt": 12, "metadata_layout": "stacked_center", "rule": "none", "feature": "abstract_lead", "page_break_after": false}},
+    {"id": "form_header", "label": "Form Header", "surfaces": ["word", "google-docs"], "tokens": {"top_space_pt": 12, "alignment": "left", "title_size_pt": 24, "subtitle_size_pt": 12, "metadata_layout": "status_row", "rule": "bottom_hairline", "feature": "instructions", "page_break_after": false}}
+  ],
+  "recipes": [
+    {"id": "executive-decision-navy", "label": "Boardroom Decision", "archetype": "decision_memo", "visual_system": "executive_navy", "density": "balanced", "opening": "memo_masthead", "surfaces": ["word", "google-docs"], "audiences": ["executive", "board", "leadership"], "purposes": ["decide", "approve"], "shapes": ["mixed", "tables", "prose"], "tones": ["formal", "decisive"], "tradeoff": "Conservative by design; limited expressive branding."},
+    {"id": "executive-decision-swiss", "label": "Swiss Decision Note", "archetype": "decision_memo", "visual_system": "swiss_minimal", "density": "balanced", "opening": "minimal_title", "surfaces": ["word", "google-docs"], "audiences": ["executive", "leadership"], "purposes": ["decide", "compare"], "shapes": ["prose", "mixed"], "tones": ["modern", "direct"], "tradeoff": "Less traditional than a conventional board memo."},
+    {"id": "board-evidence-data", "label": "Board Evidence Brief", "archetype": "board_report", "visual_system": "data_forward", "density": "compact", "opening": "data_banner", "surfaces": ["word"], "audiences": ["board", "executive"], "purposes": ["decide", "inform"], "shapes": ["data", "tables", "mixed"], "tones": ["analytical", "formal"], "tradeoff": "Best with real metrics; over-structured for prose-only content."},
+    {"id": "strategy-premium", "label": "Premium Strategy Brief", "archetype": "strategy_brief", "visual_system": "premium_minimal", "density": "airy", "opening": "minimal_title", "surfaces": ["word"], "audiences": ["executive", "client"], "purposes": ["decide", "persuade"], "shapes": ["prose", "mixed"], "tones": ["premium", "formal"], "tradeoff": "Uses more page space than compact executive formats."},
+    {"id": "strategy-monochrome", "label": "Structured Strategy Note", "archetype": "strategy_brief", "visual_system": "technical_monochrome", "density": "balanced", "opening": "memo_masthead", "surfaces": ["word", "google-docs"], "audiences": ["leadership", "technical"], "purposes": ["decide", "align"], "shapes": ["mixed", "steps"], "tones": ["technical", "neutral"], "tradeoff": "Functional rather than emotionally persuasive."},
+    {"id": "proposal-classic-navy", "label": "Classic Blue Proposal", "archetype": "proposal", "visual_system": "executive_navy", "density": "balanced", "opening": "proposal_centerpiece", "surfaces": ["word"], "audiences": ["client", "procurement", "executive"], "purposes": ["persuade", "approve"], "shapes": ["mixed", "tables"], "tones": ["formal", "credible"], "tradeoff": "Familiar and safe rather than distinctive."},
+    {"id": "proposal-premium", "label": "Premium Minimal Proposal", "archetype": "proposal", "visual_system": "premium_minimal", "density": "airy", "opening": "proposal_centerpiece", "surfaces": ["word"], "audiences": ["client", "executive"], "purposes": ["persuade", "trust"], "shapes": ["prose", "mixed"], "tones": ["premium", "refined"], "tradeoff": "Requires enough page budget for whitespace."},
+    {"id": "proposal-earth", "label": "Grounded Impact Proposal", "archetype": "proposal", "visual_system": "sustainability_earth", "density": "balanced", "opening": "proposal_centerpiece", "surfaces": ["word"], "audiences": ["community", "funder", "public"], "purposes": ["persuade", "trust"], "shapes": ["prose", "mixed"], "tones": ["warm", "credible"], "tradeoff": "The earth palette is less suitable for purely technical bids."},
+    {"id": "grant-civic", "label": "Civic Grant Application", "archetype": "grant_proposal", "visual_system": "civic_institutional", "density": "balanced", "opening": "proposal_centerpiece", "surfaces": ["word"], "audiences": ["funder", "public", "reviewer"], "purposes": ["approve", "trust"], "shapes": ["mixed", "tables"], "tones": ["formal", "accessible"], "tradeoff": "Institutional tone can feel less personal."},
+    {"id": "grant-academic", "label": "Research Grant Formal", "archetype": "grant_proposal", "visual_system": "academic_serif", "density": "compact", "opening": "research_abstract", "surfaces": ["word", "google-docs"], "audiences": ["reviewer", "academic", "funder"], "purposes": ["approve", "evaluate"], "shapes": ["prose", "tables"], "tones": ["scholarly", "formal"], "tradeoff": "Dense and intentionally restrained."},
+    {"id": "research-academic", "label": "Scholarly Research Report", "archetype": "research_report", "visual_system": "academic_serif", "density": "balanced", "opening": "research_abstract", "surfaces": ["word", "google-docs"], "audiences": ["academic", "reviewer", "technical"], "purposes": ["inform", "evaluate"], "shapes": ["prose", "data", "mixed"], "tones": ["scholarly", "formal"], "tradeoff": "Less suited to rapid executive scanning."},
+    {"id": "research-editorial", "label": "Editorial Research Narrative", "archetype": "research_report", "visual_system": "warm_editorial", "density": "airy", "opening": "editorial_cover", "surfaces": ["word"], "audiences": ["general", "client", "public"], "purposes": ["inform", "engage"], "shapes": ["prose", "visuals"], "tones": ["warm", "narrative"], "tradeoff": "Not ideal for dense technical appendices as the primary experience."},
+    {"id": "whitepaper-swiss", "label": "Swiss White Paper", "archetype": "white_paper", "visual_system": "swiss_minimal", "density": "balanced", "opening": "editorial_cover", "surfaces": ["word"], "audiences": ["professional", "client", "technical"], "purposes": ["inform", "persuade"], "shapes": ["prose", "mixed"], "tones": ["modern", "authoritative"], "tradeoff": "Strong geometry leaves little room for casual ornament."},
+    {"id": "whitepaper-warm", "label": "Human-Centered White Paper", "archetype": "white_paper", "visual_system": "warm_editorial", "density": "airy", "opening": "editorial_cover", "surfaces": ["word"], "audiences": ["general", "professional"], "purposes": ["inform", "engage"], "shapes": ["prose", "visuals"], "tones": ["warm", "thoughtful"], "tradeoff": "Longer page count than compact reference styles."},
+    {"id": "policy-civic", "label": "Public Policy Brief", "archetype": "policy_brief", "visual_system": "civic_institutional", "density": "balanced", "opening": "memo_masthead", "surfaces": ["word"], "audiences": ["public", "policy", "executive"], "purposes": ["decide", "inform"], "shapes": ["mixed", "data"], "tones": ["formal", "accessible"], "tradeoff": "Deliberately institutional rather than editorial."},
+    {"id": "policy-monochrome", "label": "Technical Policy Note", "archetype": "policy_brief", "visual_system": "technical_monochrome", "density": "compact", "opening": "minimal_title", "surfaces": ["word", "google-docs"], "audiences": ["policy", "technical", "reviewer"], "purposes": ["inform", "compare"], "shapes": ["prose", "tables"], "tones": ["technical", "neutral"], "tradeoff": "Lower emotional warmth."},
+    {"id": "legal-memo-classic", "label": "Classic Legal Memorandum", "archetype": "legal_memo", "visual_system": "legal_conservative", "density": "balanced", "opening": "memo_masthead", "surfaces": ["word"], "audiences": ["legal", "executive", "reviewer"], "purposes": ["advise", "document"], "shapes": ["prose", "mixed"], "tones": ["formal", "conservative"], "tradeoff": "Intentionally traditional with minimal visual expression."},
+    {"id": "compliance-technical", "label": "Compliance Control Report", "archetype": "compliance_report", "visual_system": "technical_monochrome", "density": "compact", "opening": "memo_masthead", "surfaces": ["word"], "audiences": ["regulator", "reviewer", "technical"], "purposes": ["document", "evaluate"], "shapes": ["tables", "mixed"], "tones": ["formal", "technical"], "tradeoff": "Grid-forward structure can feel dense."},
+    {"id": "compliance-civic", "label": "Accessible Compliance Report", "archetype": "compliance_report", "visual_system": "civic_institutional", "density": "balanced", "opening": "data_banner", "surfaces": ["word"], "audiences": ["public", "regulator", "leadership"], "purposes": ["document", "trust"], "shapes": ["data", "mixed"], "tones": ["accessible", "formal"], "tradeoff": "Uses more explanation space than a control matrix."},
+    {"id": "technical-spec-mono", "label": "Engineering Specification", "archetype": "technical_spec", "visual_system": "technical_monochrome", "density": "compact", "opening": "memo_masthead", "surfaces": ["word", "google-docs"], "audiences": ["technical", "reviewer"], "purposes": ["document", "implement"], "shapes": ["tables", "steps", "mixed"], "tones": ["technical", "precise"], "tradeoff": "Prioritizes precision over presentation flair."},
+    {"id": "rfc-swiss", "label": "Modern RFC", "archetype": "rfc", "visual_system": "swiss_minimal", "density": "balanced", "opening": "memo_masthead", "surfaces": ["word", "google-docs"], "audiences": ["technical", "leadership"], "purposes": ["decide", "align"], "shapes": ["prose", "mixed"], "tones": ["modern", "direct"], "tradeoff": "Less conventional than a monochrome engineering spec."},
+    {"id": "sop-technical", "label": "Controlled SOP", "archetype": "sop", "visual_system": "technical_monochrome", "density": "compact", "opening": "form_header", "surfaces": ["word", "google-docs"], "audiences": ["operator", "technical", "reviewer"], "purposes": ["operate", "document"], "shapes": ["steps", "tables"], "tones": ["technical", "formal"], "tradeoff": "Dense control information leaves little decorative space."},
+    {"id": "sop-humanist", "label": "Human-Centered Procedure", "archetype": "sop", "visual_system": "humanist_teal", "density": "balanced", "opening": "minimal_title", "surfaces": ["word", "google-docs"], "audiences": ["operator", "general"], "purposes": ["operate", "learn"], "shapes": ["steps", "checklist"], "tones": ["accessible", "warm"], "tradeoff": "Less formal for tightly regulated procedures."},
+    {"id": "sop-native-checklist", "label": "Native Collaborative SOP", "archetype": "sop", "visual_system": "native_docs", "density": "balanced", "opening": "form_header", "surfaces": ["word", "google-docs"], "audiences": ["operator", "team", "general"], "purposes": ["operate", "collaborate"], "shapes": ["steps", "checklist"], "tones": ["neutral", "accessible"], "tradeoff": "Familiar and highly editable, with little visual branding."},
+    {"id": "field-guide-humanist", "label": "Practical Field Guide", "archetype": "field_guide", "visual_system": "humanist_teal", "density": "compact", "opening": "customer_pack", "surfaces": ["word"], "audiences": ["operator", "general"], "purposes": ["operate", "learn"], "shapes": ["checklist", "steps", "mixed"], "tones": ["accessible", "practical"], "tradeoff": "Less suitable for formal board circulation."},
+    {"id": "field-guide-editorial", "label": "Editorial Field Guide", "archetype": "field_guide", "visual_system": "warm_editorial", "density": "balanced", "opening": "editorial_cover", "surfaces": ["word"], "audiences": ["professional", "general"], "purposes": ["learn", "engage"], "shapes": ["prose", "checklist", "visuals"], "tones": ["warm", "narrative"], "tradeoff": "More spacious than a pocket reference."},
+    {"id": "handbook-editorial", "label": "Editorial Handbook", "archetype": "handbook", "visual_system": "warm_editorial", "density": "balanced", "opening": "editorial_cover", "surfaces": ["word"], "audiences": ["general", "professional"], "purposes": ["learn", "reference"], "shapes": ["prose", "mixed"], "tones": ["warm", "polished"], "tradeoff": "Requires disciplined navigation as length grows."},
+    {"id": "handbook-swiss", "label": "Modern Reference Manual", "archetype": "handbook", "visual_system": "swiss_minimal", "density": "compact", "opening": "editorial_cover", "surfaces": ["word"], "audiences": ["professional", "technical"], "purposes": ["reference", "learn"], "shapes": ["mixed", "steps"], "tones": ["modern", "direct"], "tradeoff": "Less conversational than a humanist guide."},
+    {"id": "financial-executive", "label": "Executive Financial Review", "archetype": "financial_report", "visual_system": "executive_navy", "density": "compact", "opening": "data_banner", "surfaces": ["word"], "audiences": ["executive", "board", "finance"], "purposes": ["decide", "inform"], "shapes": ["data", "tables"], "tones": ["formal", "analytical"], "tradeoff": "Conservative palette prioritizes trust over novelty."},
+    {"id": "financial-data", "label": "Analyst Data Book", "archetype": "financial_report", "visual_system": "data_forward", "density": "compact", "opening": "data_banner", "surfaces": ["word"], "audiences": ["finance", "analyst", "executive"], "purposes": ["compare", "evaluate"], "shapes": ["data", "tables"], "tones": ["analytical", "technical"], "tradeoff": "Not appropriate when the story is mostly qualitative."},
+    {"id": "customer-pack-teal", "label": "Customer Success Pack", "archetype": "customer_pack", "visual_system": "humanist_teal", "density": "balanced", "opening": "customer_pack", "surfaces": ["word"], "audiences": ["client", "partner", "operator"], "purposes": ["align", "operate"], "shapes": ["steps", "mixed"], "tones": ["warm", "professional"], "tradeoff": "Friendly tone is less suited to legal or audit packets."},
+    {"id": "customer-pack-bold", "label": "Product Enablement Pack", "archetype": "customer_pack", "visual_system": "startup_bold", "density": "balanced", "opening": "customer_pack", "surfaces": ["word"], "audiences": ["client", "partner"], "purposes": ["engage", "align"], "shapes": ["mixed", "visuals"], "tones": ["bold", "modern"], "tradeoff": "Expressive accents need brand compatibility."},
+    {"id": "customer-story-warm", "label": "Warm Customer Story", "archetype": "case_study", "visual_system": "warm_editorial", "density": "airy", "opening": "customer_story", "surfaces": ["word"], "audiences": ["client", "public", "general"], "purposes": ["prove", "engage"], "shapes": ["prose", "visuals"], "tones": ["warm", "narrative"], "tradeoff": "Less efficient for dense implementation detail."},
+    {"id": "case-study-data", "label": "Evidence-Led Case Study", "archetype": "case_study", "visual_system": "data_forward", "density": "balanced", "opening": "customer_story", "surfaces": ["word"], "audiences": ["client", "executive"], "purposes": ["prove", "persuade"], "shapes": ["data", "mixed"], "tones": ["analytical", "credible"], "tradeoff": "Needs defensible metrics to justify the visual system."},
+    {"id": "workshop-bold", "label": "Bold Workshop Agenda", "archetype": "workshop_agenda", "visual_system": "startup_bold", "density": "balanced", "opening": "workshop_agenda", "surfaces": ["word"], "audiences": ["participant", "team"], "purposes": ["facilitate", "engage"], "shapes": ["steps", "schedule"], "tones": ["bold", "energetic"], "tradeoff": "Not appropriate for highly formal proceedings."},
+    {"id": "workshop-humanist", "label": "Collaborative Session Plan", "archetype": "workshop_agenda", "visual_system": "humanist_teal", "density": "balanced", "opening": "workshop_agenda", "surfaces": ["word"], "audiences": ["participant", "team", "general"], "purposes": ["facilitate", "align"], "shapes": ["steps", "schedule"], "tones": ["warm", "accessible"], "tradeoff": "Less visually dramatic than the bold workshop option."},
+    {"id": "status-native", "label": "Native Collaborative Update", "archetype": "status_update", "visual_system": "native_docs", "density": "balanced", "opening": "minimal_title", "surfaces": ["word", "google-docs"], "audiences": ["team", "leadership"], "purposes": ["inform", "align"], "shapes": ["mixed", "checklist"], "tones": ["neutral", "direct"], "tradeoff": "Minimal visual distinction by intent."},
+    {"id": "google-executive-brief", "label": "Google Docs Executive Brief", "archetype": "general_report", "visual_system": "executive_navy", "density": "balanced", "opening": "minimal_title", "surfaces": ["google-docs"], "audiences": ["executive", "professional"], "purposes": ["inform", "decide"], "shapes": ["prose", "mixed"], "tones": ["formal", "restrained"], "tradeoff": "Decorative elements are intentionally reduced for import fidelity."},
+    {"id": "google-research-minimal", "label": "Google Docs Research Note", "archetype": "research_report", "visual_system": "academic_serif", "density": "balanced", "opening": "research_abstract", "surfaces": ["google-docs"], "audiences": ["academic", "professional"], "purposes": ["inform", "review"], "shapes": ["prose", "mixed"], "tones": ["scholarly", "restrained"], "tradeoff": "Serif formality is less scan-oriented than a sans-serif brief."},
+    {"id": "public-guide-accessible", "label": "Accessible Public Guide", "archetype": "general_report", "visual_system": "humanist_teal", "density": "airy", "opening": "minimal_title", "surfaces": ["word", "google-docs"], "audiences": ["public", "general"], "purposes": ["inform", "learn"], "shapes": ["prose", "steps", "mixed"], "tones": ["accessible", "warm"], "tradeoff": "Uses more pages to preserve comfortable reading."},
+    {"id": "questionnaire-civic", "label": "Accessible Structured Form", "archetype": "form_questionnaire", "visual_system": "civic_institutional", "density": "airy", "opening": "form_header", "surfaces": ["word"], "audiences": ["public", "participant", "reviewer"], "purposes": ["complete", "collect"], "shapes": ["forms", "checklist"], "tones": ["accessible", "formal"], "tradeoff": "Prioritizes completion space over page economy."}
+  ],
+  "keyword_hints": {
+    "decision_memo": ["decision", "memo", "recommendation", "결정", "메모", "의사결정", "권고"],
+    "board_report": ["board", "directors", "이사회", "경영회의"],
+    "strategy_brief": ["strategy", "strategic", "전략"],
+    "proposal": ["proposal", "pitch", "rfp", "rfi", "제안", "입찰"],
+    "grant_proposal": ["grant", "funding", "지원금", "보조금", "공모"],
+    "research_report": ["research", "study", "analysis", "연구", "조사", "분석"],
+    "white_paper": ["white paper", "whitepaper", "백서"],
+    "policy_brief": ["policy", "정책"],
+    "legal_memo": ["legal", "counsel", "법률", "법무"],
+    "compliance_report": ["compliance", "audit", "control", "컴플라이언스", "감사", "통제"],
+    "technical_spec": ["specification", "technical spec", "사양", "명세"],
+    "rfc": ["rfc", "request for comments", "설계안"],
+    "sop": ["sop", "procedure", "process", "절차", "프로세스"],
+    "field_guide": ["field guide", "playbook", "guide", "현장 가이드", "플레이북", "가이드"],
+    "handbook": ["handbook", "manual", "핸드북", "매뉴얼"],
+    "financial_report": ["financial", "finance", "budget", "재무", "예산"],
+    "customer_pack": ["onboarding", "customer success", "partner", "온보딩", "고객", "파트너"],
+    "case_study": ["case study", "customer story", "사례 연구", "성공 사례"],
+    "workshop_agenda": ["workshop", "agenda", "offsite", "워크숍", "아젠다", "교육"],
+    "status_update": ["status update", "weekly update", "현황", "주간 보고"],
+    "form_questionnaire": ["form", "questionnaire", "survey", "양식", "설문", "신청서"]
+  }
+}
