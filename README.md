@@ -9,14 +9,8 @@
 
 ## 다른 머신에 설치
 
-먼저 해당 머신의 Codex에서 GitHub 인증을 완료합니다. 비공개 저장소이므로
-GitHub CLI를 사용한다면 다음 명령으로 로그인할 수 있습니다.
-
-```bash
-gh auth login -h github.com
-```
-
-그다음 Codex 대화창에서 아래 프롬프트를 실행합니다.
+이 저장소는 공개되어 있으므로 별도의 GitHub 인증 없이 설치할 수 있습니다.
+Codex 대화창에서 아래 프롬프트를 실행합니다.
 
 ```text
 $skill-installer https://github.com/ffee21/document-style-director/tree/main/document-style-director
